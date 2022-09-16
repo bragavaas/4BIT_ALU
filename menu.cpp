@@ -1,15 +1,17 @@
 #include "menu.h"
 #include <stdlib.h>
 #include <iostream>
+#include <chrono>
+#include <thread>
 
 using namespace std;
+using namespace std::this_thread;
+using namespace std::chrono;
 
-void menu::principal()
+int menu::principal()
 {
-	bool menuAtivo = true;
 	int menuOP;
-
-	while (menuAtivo)
+	while (menu_ativo)
 	{
 		system("CLS");
 		cout << "\n\n--------------------------------" << endl;
@@ -26,89 +28,22 @@ void menu::principal()
 
 		cout << "Digite a opcao desejada:" << endl;
 		cin >> menuOP;
+		return OP_escolhida(menuOP);
+	}
+}
 
-		if (menuOP_valido(1, 8, menuOP))
-		{
-			switch (menuOP)
-			{
-				case 1:
-					menuOP_1();
-					menuAtivo = false;
-					break;
-				case 2:
-					menuOP_2();
-					menuAtivo = false;
-					break;
-				case 3:
-					menuOP_3();
-					menuAtivo = false;
-					break;
-				case 4:
-					menuOP_4();
-					menuAtivo = false;
-					break;
-				case 5:
-					menuOP_5();
-					menuAtivo = false;
-					break;
-				case 6:
-					menuOP_6();
-					menuAtivo = false;
-					break;
-				case 7:
-					menuOP_7();
-					menuAtivo = false;
-					break;
-				case 8:
-					menuOP_8();
-					menuAtivo = false;
-					break;
-
-			}
-		}
-		else {
-
-			system("CLS");
-			cout << "OPCAO INVALIDA, POR FAVOR TENTE NOVAMENTE";
-			abort;
-		}
+int menu::OP_escolhida(int menuOP)
+{
+	if (menuOP_valido(1, 8, menuOP)) return menuOP;
+	else {
+		system("CLS");
+		cout << "OPCAO INVALIDA, POR FAVOR TENTE NOVAMENTE";
+		sleep_for(5s);
+		return -1;
 	}
 }
 
 bool menu::menuOP_valido(int baixo, int alto, int x)
 {
 	return  ((x - baixo) <= (alto - baixo));
-}
-
-void menu::menuOP_1()
-{
-	cout << "Definir Registrador A";
-}
-void menu::menuOP_2()
-{
-	cout << "Definir Registrador B";
-}
-void menu::menuOP_3()
-{
-	cout << "Ler Registrador A (Acc)";
-}
-void menu::menuOP_4()
-{
-	cout << "Ler Registrador B";
-}
-void menu::menuOP_5()
-{
-	cout << "Ler Registrador de Flags";
-}
-void menu::menuOP_6()
-{
-	cout << "Definir Operação";
-}
-void menu::menuOP_7()
-{
-	cout << "Executar ULA";
-}
-void menu::menuOP_8()
-{
-	cout << "**Sair**";
 }
