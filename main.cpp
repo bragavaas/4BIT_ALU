@@ -1,19 +1,20 @@
 #include <iostream>
 #include <string>
 #include "ALU.h"
-#include "datamgt.hpp"
+#include <bitset>
+
 
 using namespace std;
 
 
 int main()
 {
-	
-	ALU a;
-	a.menuALU();
-	// ALU a;
+    string binary = bitset<8>("00000111").to_string();
+    cout << binary << "\n";
 
-	//string register_a = input_dados();
-	//ALU.setRegister_a(register_a)
+    unsigned long decimal = bitset<8>(binary).to_ulong();
+    cout << decimal << "\n";
+
+
 }
 
