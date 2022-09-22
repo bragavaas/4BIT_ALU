@@ -10,10 +10,10 @@ using namespace std;
 ALU::ALU()
 {
 	menu_ativo = true;
-	register_a = "00000000";
-	register_b = "00000000";
-	op_code = "000";
-	register_flags = "000";
+	register_a = bitset<8>("00000000").to_string();
+	register_b = bitset<8>("00000000").to_string();
+	op_code = bitset<3>("000").to_string();
+	register_flags = bitset<3>("000").to_string();
 }
 void ALU::menuALU()
 {
