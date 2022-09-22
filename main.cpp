@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
-#include "ALU.h"
-#include "datamgt.hpp"
+#include "./include/ALU.h"
 #include<bitset>
 
 

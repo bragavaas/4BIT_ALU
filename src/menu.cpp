@@ -1,5 +1,5 @@
-#include "menu.h"
-#include "datamgt.hpp"
+#include "../include/menu.h"
+#include "../include/datamgt.hpp"
 #include <stdlib.h>
 #include <iostream>
 #include <chrono>

@@ -127,15 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ALU.h" />
-    <ClInclude Include="datamgt.hpp" />
-    <ClInclude Include="menu.h" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\ALU.cpp" />
+    <ClCompile Include="src\datamgt.cpp" />
+    <ClCompile Include="src\menu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ALU.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="menu.cpp" />
-    <ClCompile Include="datamgt.cpp" />
+    <Text Include="license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ALU.h" />
+    <ClInclude Include="include\datamgt.hpp" />
+    <ClInclude Include="include\menu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,6 @@
-#include "ALU.h"
-#include "menu.h"
-#include "datamgt.hpp"
+#include "../include/ALU.h"
+#include "../include/menu.h"
+#include "../include/datamgt.hpp"
 #include <stdlib.h>
 #include <iostream>
 #include <bitset>

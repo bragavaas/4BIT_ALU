@@ -15,28 +15,35 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="menu.h">
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ALU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\datamgt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ALU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ALU.h">
+    <ClInclude Include="include\datamgt.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="datamgt.hpp">
+    <ClInclude Include="include\menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ALU.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="datamgt.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>
