@@ -19,6 +19,7 @@ private:
 	void shift_right();
 	void swap_nibbles();
 	void limpa_flags();
+	void exibe_resultados();
 public:
 	ALU();
 	void menuALU();

@@ -51,6 +51,7 @@ void ALU::menuALU()
 			break;
 		case 7:
 			executar();
+			exibe_resultados();
 			break;
 		}
 	}
@@ -105,7 +106,6 @@ void ALU::imprime_reg_flag()
 	cout << "---------------------------------------------------" << endl;
 	menu::retornarAoMenuPrincipal();
 }
-
 void ALU::define_op()
 {
 	menu::exibeMenuOperacoes();
@@ -256,3 +256,26 @@ void ALU::swap_nibbles()
 	
 };
 void ALU::limpa_flags() { register_flags = "0000"; }
+void ALU::exibe_resultados() {
+	system("CLS");
+	cout << "*************************" << endl;
+	cout << "RESULTADO DA OPERACAO" << endl;
+	cout << "REGISTRADOR A (APOS A OPERACAO): " << register_a << "( " << bitset<8>(register_a).to_ulong() << " );" << endl;
+	cout << "REGISTRADOR DE FLAGS: " << register_flags << "( " << bitset<8>(register_flags).to_ulong() - 1 << " );" << endl;
+	
+	if (bitset<8>(register_flags).to_ulong() != 0)
+	{
+		cout << "---------------------------------------------------" << endl;
+		cout << "|TABELA DE FLAGS                                  |" << endl;
+		cout << "---------------------------------------------------" << endl;
+		cout << "| ALU FLAG BIT | NOME | Significado               |" << endl;
+		cout << "---------------------------------------------------" << endl;
+		cout << "|      3       |   N  | Resultado Negativo        |" << endl;
+		cout << "|      2       |   Z  | Resultado Zero            |" << endl;
+		cout << "|      1       |   C  | Resultado Carry Out       |" << endl;
+		cout << "|      0       |   V  | Resultado Overflow        |" << endl;
+		cout << "---------------------------------------------------" << endl;
+	}
+
+	menu::retornarAoMenuPrincipal();
+};
