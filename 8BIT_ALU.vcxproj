@@ -128,15 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ALU.h" />
-    <ClInclude Include="globalfunctions.h" />
+    <ClInclude Include="datamgt.hpp" />
     <ClInclude Include="menu.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ALU.cpp" />
-    <ClCompile Include="globalfunctions.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
-    <ClCompile Include="rascunho.cpp" />
+    <ClCompile Include="datamgt.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

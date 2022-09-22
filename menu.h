@@ -1,13 +1,17 @@
 #pragma once
+#include <string>
+
+using namespace std; 
+
 class menu
 {
-	bool menuOP_valido(int baixo, int alto, int x);
-
-
 
 public:
-	int principal();
-	int OP_escolhida(int menuOP);
-	bool menu_ativo = true;
+	static void exibeMenuPrincipal();
+	static void exibeMenuOperacoes();
+	static string inputMenu();
+	static void retornarAoMenuPrincipal();
+
+	friend class ALU;
 };
 

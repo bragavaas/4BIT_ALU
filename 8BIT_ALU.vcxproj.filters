@@ -21,7 +21,7 @@
     <ClInclude Include="ALU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="globalfunctions.h">
+    <ClInclude Include="datamgt.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,10 +35,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="rascunho.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="globalfunctions.cpp">
+    <ClCompile Include="datamgt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
