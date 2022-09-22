@@ -9,6 +9,15 @@ class ALU
 private:
 	string register_a, register_b, register_flags, op_code;
 	bool menu_ativo;
+
+	void a_plus_b();
+	void a_minus_b();
+	void a_and_b();
+	void a_or_b();
+	void not_a();
+	void shift_left();
+	void shift_right();
+	void swap_nibbles();
 public:
 	ALU();
 	void menuALU();

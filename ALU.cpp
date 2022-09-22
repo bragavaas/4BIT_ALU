@@ -3,6 +3,7 @@
 #include "datamgt.hpp"
 #include <stdlib.h>
 #include <iostream>
+#include <bitset>
 
 using namespace std;
 
@@ -98,5 +99,54 @@ void ALU::define_op()
 }
 void ALU::executar()
 {
+	system("CLS");
+	cout << "****************************";
+	cout << "EXECUTANDO A ALU";
+	cout << "Operação escolhida: ";
+	switch (stoi(op_code, 0, 2))
+	{
+	case 0:
+		a_plus_b();
+		break;
+	case 1:
+		a_minus_b();
+		break;
+	case 2:
+		a_and_b();
+		break;
+	case 3:
+		a_or_b();
+		break;
+	case 4:
+		not_a();
+		break;
+	case 5:
+		shift_left();
+		break;
+	case 6:
+		shift_right();
+		break;
+	case 7:
+		swap_nibbles();
+		break;
+	}
+}
+void ALU::a_plus_b() {};
+void ALU::a_minus_b() {};
+void ALU::a_and_b() {};
+void ALU::a_or_b() {};
+void ALU::not_a() {};
+void ALU::shift_left(){
+	
+
+
+
+
+
 
 }
+void ALU::shift_right() {};
+void ALU::swap_nibbles()
+{
+
+};
